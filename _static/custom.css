@@ -1,4 +1,0 @@
-/* Sembunyikan item pertama di sidebar (Intro/Root) */
-.nav .bd-sidenav .bd-sidenav__home-link {
-    display: none !important;
-}

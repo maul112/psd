@@ -7,6 +7,9 @@ options:
   remove: true
 
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+# - file: markdown
+# - file: notebooks
+# - file: markdown-notebooks
+- file: memahamibisnis
+- file: dataunderstanding
+- file: explorasidata
