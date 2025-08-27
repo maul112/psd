@@ -7,3 +7,7 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
+
+options:
+  intro:
+    remove: true
