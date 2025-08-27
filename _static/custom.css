@@ -1,0 +1,4 @@
+/* Sembunyikan item pertama di sidebar (Intro/Root) */
+.bd-sidebar nav li:first-child {
+    display: none !important;
+}
