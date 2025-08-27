@@ -1,4 +1,4 @@
 /* Sembunyikan item pertama di sidebar (Intro/Root) */
-.bd-sidebar nav li:first-child {
+.nav .bd-sidenav .bd-sidenav__home-link {
     display: none !important;
 }
