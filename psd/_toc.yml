@@ -3,11 +3,10 @@
 
 format: jb-book
 root: intro
+options:
+  remove: true
+
 chapters:
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
-
-options:
-  intro:
-    remove: true
