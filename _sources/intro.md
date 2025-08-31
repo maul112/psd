@@ -1,11 +1,8 @@
 # Introduction
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Halo, perkenalkan saya Maulana Ardiansyah Prodi Teknik Informatika 23 dengan NIM 230411100159. Saya sedikit suka coding terutama Python. Jika ingin sharing mengenai coding bisa email saya di ardicakep81@gmail.com (bapak saya yang buatkan email).
 
-Check out the content pages bundled with this sample book to see more.
+Dibawah adalah progres belajar saya dalam matakuliah Proyek Sains Data semester 5 :
 
 ```{tableofcontents}
 ```
