@@ -92,3 +92,29 @@ Query untuk insert :
 ```{code}
 INSERT INTO reviews (review_id, store_name, category, store_address, latitude, longitude, rating_count, review_time, review, rating) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
 ```
+
+Query untuk load data dari PostgreSQL ke Power BI :
+
+```{code}
+import psycopg2
+import pandas as pd
+
+# Koneksi ke PostgreSQL
+conn = psycopg2.connect(
+    host="localhost",
+    port="5432",
+    database="psd",
+    user="postgres",
+    password="1123581321"
+)
+
+query = "SELECT * FROM reviews"
+
+df = pd.read_sql(query, conn)
+
+conn.close()
+
+# Return dataframe ke Power BI
+df
+
+```
