@@ -420,6 +420,60 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">-</span><span class="n">connector</span><span class="o">-</span><span class="n">python</span>
 </pre></div>
 </div>
+<ol class="arabic simple" start="3">
+<li><p>Buka Power BI</p></li>
+</ol>
+<p>Lalu pilih (Get data from other source) sebelah kanan atas</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(218).png" /></p>
+<p>Cari “Python Script” lalu pilih “Connect”.</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(219).png" /></p>
+<p>lalu masukkan script Python berikut untuk melakukan simulasi pemisahan kolom data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mysql.connector</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">psycopg2</span>
+
+<span class="c1"># 1. Koneksi ke MySQL</span>
+<span class="n">mysql_conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;psd&quot;</span>
+<span class="p">)</span>
+
+<span class="n">query_mysql</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM halfiris&quot;</span>
+<span class="n">df_mysql</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_mysql</span><span class="p">,</span> <span class="n">mysql_conn</span><span class="p">)</span>
+
+<span class="c1"># 2. Koneksi ke PostgreSQL</span>
+<span class="n">pg_conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;1123581321&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;psd&quot;</span>
+<span class="p">)</span>
+
+<span class="n">query_pg</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM halfiris&quot;</span>
+<span class="n">df_pg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_pg</span><span class="p">,</span> <span class="n">pg_conn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(220).png" /></p>
+<p>sebelumnya saya sudah memisahkan data Iris menjadi dua bagian. Bagian kolom id, SepalLengthCm dan SepalWidthCm saya taruh di database MySQL dan kolom id, PetalLengthCm dan PetalWidthCm saya taruh di database PostgreSQL.</p>
+<p>Lalu pilih dua tabel hasil return dari Script Python. Setelah itu klik Load. Tunggu data hingga ke-Load.</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(221).png" /></p>
+<p>Pilih (Transform Data) pada ribbon Power BI (bagian atas), lalu pilih lagi “Transform Data”.</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(230).png" /></p>
+<p>Lalu pilih “Merge Queries” dan klik “Merge Queries as New”.</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(224).png" /></p>
+<p>Pilih id dari kedua data sebagai acuan persamaan antar barisnya. Lalu klik “Ok”.</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(225).png" /></p>
+<p>Setelah itu expand tabel df_pg dan jangan pilih kolom id agar kolom id hanya ada satu saja. Lalu pilih “close and apply” dan pilih tab Table view. Setelah itu tampilannya akan seperti berikut:</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(226).png" /></p>
+<p><img alt="Teks alternatif" src="img/Screenshot%20(229).png" /></p>
+<p>Maka data akan tergabung. Itulah simulasi menarik data yang terpisah dan menyatukannya di Power BI.</p>
+<p><img alt="Teks alternatif" src="_images/." />
+<img alt="Teks alternatif" src="_images/." />
+<img alt="Teks alternatif" src="_images/." />
+<img alt="Teks alternatif" src="_images/." />
+<img alt="Teks alternatif" src="_images/." /></p>
 </section>
 
     <script type="text/x-thebe-config">
