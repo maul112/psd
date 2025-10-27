@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Peramalan kadar \(NO_2\) di daerah Bangkalan Madura &#8212; My sample book</title>
+    <title>Peramalan kadar \(NO_2\) di daerah Bangkalan Madura (revisi) &#8212; My sample book</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'no2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'no2_2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Peramalan kadar \(NO_2\) di daerah Bangkalan Madura (revisi)" href="no2_2.html" />
-    <link rel="prev" title="Outlier Detection dan Clustering" href="outlierdetectionclustering.html" />
+    <link rel="next" title="KNIME TUTORIAL" href="knimetutorial.html" />
+    <link rel="prev" title="Peramalan kadar \(NO_2\) di daerah Bangkalan Madura" href="no2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,8 +189,8 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</a></li>
-<li class="toctree-l1"><a class="reference internal" href="no2_2.html">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura (revisi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="no2.html">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura (revisi)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="knimetutorial.html">KNIME TUTORIAL</a></li>
 </ul>
 
@@ -263,7 +263,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fno2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fno2_2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +293,7 @@
       
       
       
-      <li><a href="_sources/no2.ipynb" target="_blank"
+      <li><a href="_sources/no2_2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Peramalan kadar NO_2 di daerah Bangkalan Madura</h1>
+    <h1>Peramalan kadar NO_2 di daerah Bangkalan Madura (revisi)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,13 +394,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-rata-rata-kan-data-dan-ubah-datetime">b. Rata-rata kan Data dan ubah Datetime</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-simpan-data-dalam-bentuk-csv">c. Simpan data dalam bentuk CSV</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-pengecekan-missing-value-data-harian-pada-csv">d. Pengecekan Missing Value data harian pada CSV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-deteksi-outlier-iqr">e. Deteksi Outlier IQR</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-menggunakan-knn-regression">3. Modeling menggunakan KNN Regression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-normalisasi-data">a. Normalisasi Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-mengubah-data">b. Mengubah Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-dan-evaluation">Modeling dan Evaluation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-uji-korelasi-data">a. Uji Korelasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-normalisasi-data">b. Normalisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-mengubah-data">c. Mengubah Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-modeling-dan-evaluation">d. Modeling dan Evaluation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-plotting">e. Plotting</a></li>
 </ul>
 </li>
 </ul>
@@ -414,8 +416,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="peramalan-kadar-no-2-di-daerah-bangkalan-madura">
-<h1>Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura<a class="headerlink" href="#peramalan-kadar-no-2-di-daerah-bangkalan-madura" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="peramalan-kadar-no-2-di-daerah-bangkalan-madura-revisi">
+<h1>Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura (revisi)<a class="headerlink" href="#peramalan-kadar-no-2-di-daerah-bangkalan-madura-revisi" title="Link to this heading">#</a></h1>
 <section id="latar-belakang">
 <h2>Latar Belakang<a class="headerlink" href="#latar-belakang" title="Link to this heading">#</a></h2>
 <p>Peningkatan aktivitas industri, transportasi, serta pertumbuhan populasi yang pesat telah menyebabkan peningkatan signifikan terhadap tingkat pencemaran udara di berbagai wilayah. Salah satu polutan udara utama yang menjadi perhatian adalah Nitrogen Dioksida (NO₂), yaitu gas beracun yang dihasilkan terutama dari proses pembakaran bahan bakar fosil seperti kendaraan bermotor, pembangkit listrik, dan kegiatan industri. NO₂ memiliki dampak serius terhadap kesehatan manusia, seperti gangguan pernapasan, iritasi paru-paru, serta memperburuk penyakit asma dan bronkitis. Selain itu, NO₂ juga berkontribusi terhadap pembentukan hujan asam dan penurunan kualitas lingkungan secara keseluruhan.</p>
@@ -699,12 +701,175 @@ memory usage: 11.5+ KB
 </pre></div>
 </div>
 </section>
+<section id="e-deteksi-outlier-iqr">
+<h3>e. Deteksi Outlier IQR<a class="headerlink" href="#e-deteksi-outlier-iqr" title="Link to this heading">#</a></h3>
+<p>Setelah kita mengisi missing value menggunakan metode Interpolasi Linear, selanjutnya kita akan mendeteksi Outlier menggunakan metode IQR.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;no2_timeseries_interpolated.csv&quot;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+
+<span class="c1"># Hitung IQR</span>
+<span class="n">Q1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">Q3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+
+<span class="c1"># Filter outlier</span>
+<span class="n">outliers_iqr</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah Outlier (IQR):&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">outliers_iqr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">outliers_iqr</span><span class="p">[[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;NO2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="n">output</span><span class="o">/</span><span class="n">terminal</span>
+<span class="n">Jumlah</span> <span class="n">Outlier</span> <span class="p">(</span><span class="n">IQR</span><span class="p">):</span> <span class="mi">14</span>
+         <span class="n">date</span>       <span class="n">NO2</span>
+<span class="mi">45</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">15</span>  <span class="mf">0.000051</span>
+<span class="mi">46</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span>  <span class="mf">0.000044</span>
+<span class="mi">48</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">18</span>  <span class="mf">0.000051</span>
+<span class="mi">67</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">07</span>  <span class="mf">0.000047</span>
+<span class="mi">68</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">08</span>  <span class="mf">0.000045</span>
+</pre></div>
+</div>
+<p>Untuk men-visualisasi outlier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Visualisasi ===</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;NO2&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Titik Outlier</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">outliers_iqr</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">outliers_iqr</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">],</span> 
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Outliers&quot;</span><span class="p">)</span>
+
+<span class="c1"># Garis batas atas &amp; bawah</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Upper Bound (IQR)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Lower Bound (IQR)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Deteksi Outlier Data NO2 (Metode IQR)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tanggal&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Kadar NO2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span>
+    <span class="n">ticks</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)]</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="Teks alternatif" src="_images/Figure_1.png" /></p>
+<p>Setelah itu, kita akan menghapus data outlier. Karena data ini merupakan data Time Series, maka data outlier yang dihapus akan diisi kembali menggunakan Interpolasi Linear.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tandai outlier menjadi NaN</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah nilai yang dinyatakan sebagai outlier:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Interpolasi linear untuk mengisi kembali nilai outlier</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_filled&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+
+<span class="c1"># Jika masih tersisa NaN di ujung data, isi dengan forward/backward fill</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_filled&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_filled&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">bfill</span><span class="p">()</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span>
+<span class="c1"># df[&#39;NO2_filled&#39;] = df[&#39;NO2_filled&#39;].fillna(method=&#39;bfill&#39;).fillna(method=&#39;ffill&#39;)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah missing setelah interpolasi:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_filled&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Visualisasi data setelah menghapus Outlier dan mengisi kembali menggunakan Interpolasi Linear:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="c1"># Plot data hasil interpolasi</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_filled&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;NO2 (Interpolated)&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Tampilkan hanya tanggal awal dan akhir di sumbu X</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span>
+    <span class="n">ticks</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)]</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Plot Data NO2 Setelah Outlier Removal &amp; Interpolasi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tanggal&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Kadar NO2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="Teks alternatif" src="_images/Figure_2.png" /></p>
+</section>
 </section>
 <section id="modeling-menggunakan-knn-regression">
 <h2>3. Modeling menggunakan KNN Regression<a class="headerlink" href="#modeling-menggunakan-knn-regression" title="Link to this heading">#</a></h2>
 <p>Dengan data Time Series kadar NO2 harian di daerah Bangkalan, kita akan memprediksi kadar NO2 satu hari yang akan datang. Sekarang kita akan ubah data, mencoba mencari korelasi antara 1 hari dengan 4 hari sebelumnya. Kita juga akan membandingkan apakah semakin banyak hari sebelumnya, model akan lebih bagus?</p>
-<section id="a-normalisasi-data">
-<h3>a. Normalisasi Data<a class="headerlink" href="#a-normalisasi-data" title="Link to this heading">#</a></h3>
+<section id="a-uji-korelasi-data">
+<h3>a. Uji Korelasi Data<a class="headerlink" href="#a-uji-korelasi-data" title="Link to this heading">#</a></h3>
+<p>Sebelum masuk ke modeling, data kita merupakan data unsupervised yang berarti tidak ada label. Kita ubah data menjadi supervised lalu uji korelasi terhadap label (t). Fitur-fitur nya merupakan 30 hari sebelum (t-30, t-29, … t-1) dan label (t).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">create_supervised</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_lag</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">df_supervised</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    
+    <span class="c1"># Membuat fitur t-4 sampai t-1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_lag</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">df_supervised</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;NO2(t-</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="c1"># Label hari H</span>
+    <span class="n">df_supervised</span><span class="p">[</span><span class="s1">&#39;NO2(t)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+    
+    <span class="c1"># Hapus baris yang masih mengandung NaN akibat shift</span>
+    <span class="n">df_supervised</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">df_supervised</span>
+
+<span class="c1"># contoh penggunaan</span>
+<span class="n">supervised_df30</span> <span class="o">=</span> <span class="n">create_supervised</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_scaled&#39;</span><span class="p">],</span> <span class="n">n_lag</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># Ambil semua lag dan kolom target</span>
+<span class="n">lag_cols</span> <span class="o">=</span> <span class="n">supervised_df30</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;NO2(t)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">correlations</span> <span class="o">=</span> <span class="n">supervised_df30</span><span class="p">[</span><span class="n">lag_cols</span><span class="p">]</span><span class="o">.</span><span class="n">corrwith</span><span class="p">(</span><span class="n">supervised_df30</span><span class="p">[</span><span class="s1">&#39;NO2(t)&#39;</span><span class="p">])</span>
+
+<span class="c1"># Tampilkan nilai korelasi</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correlations</span><span class="p">)</span>
+
+<span class="n">output</span><span class="o">/</span><span class="n">terminal</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">30</span><span class="p">)</span>    <span class="mf">0.442365</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">29</span><span class="p">)</span>    <span class="mf">0.454480</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">28</span><span class="p">)</span>    <span class="mf">0.475354</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">27</span><span class="p">)</span>    <span class="mf">0.411464</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">26</span><span class="p">)</span>    <span class="mf">0.381559</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">25</span><span class="p">)</span>    <span class="mf">0.368824</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">24</span><span class="p">)</span>    <span class="mf">0.353114</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">23</span><span class="p">)</span>    <span class="mf">0.364938</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">22</span><span class="p">)</span>    <span class="mf">0.372437</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">21</span><span class="p">)</span>    <span class="mf">0.380476</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span>    <span class="mf">0.350856</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">19</span><span class="p">)</span>    <span class="mf">0.342492</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">18</span><span class="p">)</span>    <span class="mf">0.312603</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">17</span><span class="p">)</span>    <span class="mf">0.283336</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">16</span><span class="p">)</span>    <span class="mf">0.288346</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">15</span><span class="p">)</span>    <span class="mf">0.292171</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">14</span><span class="p">)</span>    <span class="mf">0.311974</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">13</span><span class="p">)</span>    <span class="mf">0.327142</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>    <span class="mf">0.341764</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">11</span><span class="p">)</span>    <span class="mf">0.374090</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>    <span class="mf">0.397377</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">9</span><span class="p">)</span>     <span class="mf">0.419258</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span>     <span class="mf">0.455909</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>     <span class="mf">0.462456</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span>     <span class="mf">0.460161</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>     <span class="mf">0.491515</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>     <span class="mf">0.523820</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>     <span class="mf">0.593839</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>     <span class="mf">0.675955</span>
+<span class="n">NO2</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>     <span class="mf">0.796441</span>
+</pre></div>
+</div>
+<p>Skala nilai uji korelasi itu dari -1 sampai 1, namun kita ambil nilai uji korelasi yang terbaik yaitu lebih dari 0.5 yaitu fitur t-1 sampai t-4.</p>
+</section>
+<section id="b-normalisasi-data">
+<h3>b. Normalisasi Data<a class="headerlink" href="#b-normalisasi-data" title="Link to this heading">#</a></h3>
 <p>karena kita menggunakan model KNN Regression, maka perlu normalisasi data menggunakan min-max Scaler.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">MinMaxScaler</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -735,28 +900,10 @@ memory usage: 17.3+ KB
 </pre></div>
 </div>
 </section>
-<section id="b-mengubah-data">
-<h3>b. Mengubah Data<a class="headerlink" href="#b-mengubah-data" title="Link to this heading">#</a></h3>
-<p>Sekarang saya ingin mengubah data dari sebelumnya hanya 2 fitru menjadi 4 hari sebelum yang terdapat 5 fitur (t-4, t-3, t-2, t-1, dan t sebagai label), saya juga membuat data 10 hari sebelum untuk membandingkan apakah semakin banyak hari sebelum, semakin baik pula modelnya?</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">create_supervised</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_lag</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">df_supervised</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-    
-    <span class="c1"># Membuat fitur t-4 sampai t-1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_lag</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">df_supervised</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;NO2(t-</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    
-    <span class="c1"># Label hari H</span>
-    <span class="n">df_supervised</span><span class="p">[</span><span class="s1">&#39;NO2(t)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
-    
-    <span class="c1"># Hapus baris yang masih mengandung NaN akibat shift</span>
-    <span class="n">df_supervised</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">df_supervised</span>
-
-<span class="c1"># contoh penggunaan</span>
-<span class="n">supervised_df</span> <span class="o">=</span> <span class="n">create_supervised</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_scaled&#39;</span><span class="p">],</span> <span class="n">n_lag</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<section id="c-mengubah-data">
+<h3>c. Mengubah Data<a class="headerlink" href="#c-mengubah-data" title="Link to this heading">#</a></h3>
+<p>Sekarang saya ingin mengubah data dari sebelumnya hanya 2 fitru menjadi 4 hari sebelum yang terdapat 5 fitur (t-4, t-3, t-2, t-1, dan t sebagai label) karena dari uji korelasi, keempat fitur tersebut (t-1 sampai t-4) merupakan nilai uji korelasi terbaik (lebih dari 0.5). Saya juga membuat data 10 hari sebelum untuk membandingkan apakah semakin banyak hari sebelum, semakin baik pula modelnya?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">supervised_df</span> <span class="o">=</span> <span class="n">create_supervised</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_scaled&#39;</span><span class="p">],</span> <span class="n">n_lag</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">supervised_df</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">supervised_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -781,6 +928,7 @@ memory usage: 17.3+ KB
 </div>
 <p>Untuk membuat data 10 hari sebelum tinggal tambah code dibawah (ubah parameter n_lag).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">supervised_df10</span> <span class="o">=</span> <span class="n">create_supervised</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO2_scaled&#39;</span><span class="p">],</span> <span class="n">n_lag</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">supervised_df10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">supervised_df10</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
@@ -803,16 +951,22 @@ memory usage: 17.3+ KB
 </pre></div>
 </div>
 </section>
-<section id="modeling-dan-evaluation">
-<h3>Modeling dan Evaluation<a class="headerlink" href="#modeling-dan-evaluation" title="Link to this heading">#</a></h3>
+<section id="d-modeling-dan-evaluation">
+<h3>d. Modeling dan Evaluation<a class="headerlink" href="#d-modeling-dan-evaluation" title="Link to this heading">#</a></h3>
 <p>Sekarang dari 2 data yang sudah kita rubah, kita train menggunakan model KNN Regression.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
+<span class="k">def</span><span class="w"> </span><span class="nf">MAPE</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_true</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+    <span class="c1"># Hindari pembagian dengan nol</span>
+    <span class="n">nonzero</span> <span class="o">=</span> <span class="n">y_true</span> <span class="o">!=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">y_true</span><span class="p">[</span><span class="n">nonzero</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">nonzero</span><span class="p">])</span> <span class="o">/</span> <span class="n">y_true</span><span class="p">[</span><span class="n">nonzero</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
+
 <span class="k">def</span><span class="w"> </span><span class="nf">train_knn</span><span class="p">(</span><span class="n">df_supervised</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
-    <span class="c1"># Pisahkan fitur dan label</span>
+    <span class="c1"># Pisahkan fitur &amp; label</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">df_supervised</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;NO2(t)&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">df_supervised</span><span class="p">[</span><span class="s1">&#39;NO2(t)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
@@ -821,7 +975,7 @@ memory usage: 17.3+ KB
         <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span>
     <span class="p">)</span>
 
-    <span class="c1"># Model KNN Regressor</span>
+    <span class="c1"># Model KNN</span>
     <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
@@ -832,11 +986,13 @@ memory usage: 17.3+ KB
     <span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
     <span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
     <span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">mape</span> <span class="o">=</span> <span class="n">MAPE</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2"> ===&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Train Size: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="si">}</span><span class="s2"> — Test Size: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R² Score: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE: </span><span class="si">{</span><span class="n">mape</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">knn</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span>
 
@@ -853,16 +1009,29 @@ memory usage: 17.3+ KB
 Train Size: 581 — Test Size: 146
 RMSE: 0.065436
 R² Score: 0.1395
+MAPE: 61.0780%
 
 === KNN - 10 Hari Sebelumnya ===
 Train Size: 576 — Test Size: 145
 RMSE: 0.067567
 R² Score: 0.0886
+MAPE: 64.6611%
+</pre></div>
+</div>
+<p>Berdasarkan hasil arkurasi diatas menjunjukkan bahwa lebih banyak hari sebelumnya maka model semakin bagus. Kita coba gunakan data 30 hari sebelumnya juga untuk melihat apakah semakin banyak hari sebelumnya, model semakin baik?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>knn_30, y_test_30, y_pred_30 = train_knn(supervised_df30, &quot;KNN - 30 Hari Sebelumnya&quot;)
+
+output/terminal
+=== KNN - 30 Hari Sebelumnya ===
+Train Size: 560 — Test Size: 141
+RMSE: 0.074803
+R² Score: -0.0875
+MAPE: 72.2295%
 </pre></div>
 </div>
 </section>
-<section id="plotting">
-<h3>Plotting<a class="headerlink" href="#plotting" title="Link to this heading">#</a></h3>
+<section id="e-plotting">
+<h3>e. Plotting<a class="headerlink" href="#e-plotting" title="Link to this heading">#</a></h3>
 <p>Plotting untuk visualisasi grafik antara label dan prediksi dari kedua data diatas.</p>
 <p>4 hari sebelum:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -891,7 +1060,19 @@ R² Score: 0.0886
 </pre></div>
 </div>
 <p><img alt="Teks alternatif" src="img/Screenshot%202025-10-25%20164003.png" /></p>
-<p>Berdasarkan hasil pengujian model KNN Regression terhadap dua skenario jumlah fitur, yaitu 4 hari sebelumnya dan 10 hari sebelumnya, dapat disimpulkan bahwa penambahan jumlah fitur berupa lag harian tidak selalu meningkatkan kinerja model. Pada kasus data konsentrasi NO₂ ini, model dengan 4 hari sebelumnya justru menunjukkan performa yang lebih baik dengan nilai RMSE lebih kecil dan R² yang lebih tinggi dibandingkan model dengan 10 hari sebelumnya. Hal ini mengindikasikan bahwa pola perubahan NO₂ lebih dipengaruhi oleh kondisi dalam beberapa hari terakhir, sehingga penambahan data historis yang terlalu jauh dapat menimbulkan noise dan mengurangi kemampuan model dalam mengenali pola. Selain itu, KNN merupakan metode berbasis kedekatan jarak yang cenderung mengalami penurunan performa ketika jumlah fitur bertambah karena curse of dimensionality. Dengan demikian, penggunaan 4 fitur (4 hari sebelumnya) lebih efektif dalam memodelkan data ini dibandingkan penggunaan 10 fitur.</p>
+<p>30 hari sebelum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test_30</span><span class="p">)),</span> <span class="n">y_test_30</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Actual&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_pred_30</span><span class="p">)),</span> <span class="n">y_pred_30</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Predicted&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;KNN Regression - 30 Hari Sebelumnya&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Sample Index&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;NO2 Value&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="Teks alternatif" src="img/Screenshot%202025-10-27%20115826.png" /></p>
+<p>Hasil evaluasi model KNN Regression menunjukkan bahwa peningkatan jumlah fitur historis (lag) tidak serta merta meningkatkan performa prediksi. Pada model dengan 4 hari sebelumnya, nilai RMSE paling kecil dan R² masih positif sehingga model mampu menjelaskan sebagian kecil variabilitas data target. Namun, ketika jumlah lag ditambah menjadi 10 dan 30 hari sebelumnya, performa model justru menurun yang ditunjukkan oleh meningkatnya nilai RMSE dan MAPE, serta penurunan nilai R² hingga bernilai negatif pada lag 30. Nilai MAPE yang cukup tinggi pada seluruh model (lebih dari 60%) juga mengindikasikan bahwa akurasi prediksi masih rendah dan terdapat deviasi besar antara nilai prediksi dan nilai aktual. Secara keseluruhan, model KNN tidak memberikan performa yang baik pada data ini, dan penambahan fitur historis justru menyebabkan overfitting serta menurunkan kemampuan generalisasi model. Oleh karena itu, diperlukan pemilihan model lain atau peningkatan strategi preprocessing untuk memperoleh hasil prediksi yang lebih baik.</p>
 </section>
 </section>
 </section>
@@ -927,20 +1108,20 @@ R² Score: 0.0886
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="outlierdetectionclustering.html"
+       href="no2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Outlier Detection dan Clustering</p>
+        <p class="prev-next-title">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</p>
       </div>
     </a>
     <a class="right-next"
-       href="no2_2.html"
+       href="knimetutorial.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura (revisi)</p>
+        <p class="prev-next-title">KNIME TUTORIAL</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -967,13 +1148,15 @@ R² Score: 0.0886
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-rata-rata-kan-data-dan-ubah-datetime">b. Rata-rata kan Data dan ubah Datetime</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-simpan-data-dalam-bentuk-csv">c. Simpan data dalam bentuk CSV</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-pengecekan-missing-value-data-harian-pada-csv">d. Pengecekan Missing Value data harian pada CSV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-deteksi-outlier-iqr">e. Deteksi Outlier IQR</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-menggunakan-knn-regression">3. Modeling menggunakan KNN Regression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-normalisasi-data">a. Normalisasi Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-mengubah-data">b. Mengubah Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-dan-evaluation">Modeling dan Evaluation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-uji-korelasi-data">a. Uji Korelasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-normalisasi-data">b. Normalisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-mengubah-data">c. Mengubah Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-modeling-dan-evaluation">d. Modeling dan Evaluation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-plotting">e. Plotting</a></li>
 </ul>
 </li>
 </ul>

@@ -16,4 +16,5 @@ chapters:
     - file: explorasidata
     - file: outlierdetectionclustering
 - file: no2
+- file: no2_2
 - file: knimetutorial
