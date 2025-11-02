@@ -1,0 +1,1134 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Voice Recognition &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'voice_recognition';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="memahamibisnis.html">Memahami Bisnis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dataunderstanding.html">Data Understanding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="explorasidata.html">Explorasi Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outlierdetectionclustering.html">Outlier Detection dan Clustering</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="no2.html">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="no2_2.html">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura (revisi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knimetutorial.html">Knime Tutuorial</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fvoice_recognition.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/voice_recognition.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Voice Recognition</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengambilan-data">Pengambilan Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengubahan-nama-file-serentak">a. Pengubahan Nama File Serentak</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-ekstraksi-audio-menjadi-csv">b. Ekstraksi Audio menjadi CSV</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preproccessing-data">Preproccessing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-value">Missing Value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">Deployment</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="voice-recognition">
+<h1>Voice Recognition<a class="headerlink" href="#voice-recognition" title="Link to this heading">#</a></h1>
+<p>Kali ini saya ingin membuat model sederhana yang bisa mengenali suara atau Voice Recognition. Terdiri dari 2 label yaitu buka dan tutup.</p>
+<section id="pengambilan-data">
+<h2>Pengambilan Data<a class="headerlink" href="#pengambilan-data" title="Link to this heading">#</a></h2>
+<p>Untuk dataset, saya membuat data sendiri dengan cara merekam suara pengucapan kata buka atau tutup. Dataset yang saya buat terdiri dari file dengan pengucapan kata buka sebanyak 100 file dan pengucapan kata tutup sebanyak 100 file yang tentunya dengan nada yang bervariasi. Saya taruh kedua suara tersebut secara terpisah kedalam folder yang terpisah juga. Saya menggunakan website <a class="reference external" href="https://online-voice-recorder.com/">https://online-voice-recorder.com/</a> .</p>
+<section id="a-pengubahan-nama-file-serentak">
+<h3>a. Pengubahan Nama File Serentak<a class="headerlink" href="#a-pengubahan-nama-file-serentak" title="Link to this heading">#</a></h3>
+<p>Untuk mempermudah proses ekstraksi audio, saya ubah nama file dari sebelumnya Record (<a class="reference external" href="http://online-voice-recorder.com">online-voice-recorder.com</a>).mp3 menjadi buka(1-100).mp3 dan tutup(1-100).mp3 menggunakan code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">folder_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;</span><span class="si">{path}</span><span class="s2">\voice\tutup&quot;</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mp3&quot;</span><span class="p">:</span>
+        <span class="n">old_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">old_path</span><span class="p">):</span>
+            <span class="n">filename</span><span class="p">,</span> <span class="n">file_extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">new_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;tutup</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.mp3&quot;</span>
+            <span class="n">new_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">old_path</span><span class="p">,</span> <span class="n">new_path</span><span class="p">)</span>
+
+<span class="c1"># print(&quot;Semua file berhasil diubah namanya.&quot;)</span>
+</pre></div>
+</div>
+<p><img alt="Teks alternatif" src="img/Screenshot%202025-10-27%20131651.png" /></p>
+</section>
+<section id="b-ekstraksi-audio-menjadi-csv">
+<h3>b. Ekstraksi Audio menjadi CSV<a class="headerlink" href="#b-ekstraksi-audio-menjadi-csv" title="Link to this heading">#</a></h3>
+<p>Pertama kita ekstrak audio menjadi data dengan beberapa fitur. Untuk ekstraksi audio saya menggunakan library liborsa. Code dibawah akan mengekstrak audio dan otomatis akan save file berbentuk CSV. Namun untuk data suara buka dan tutup masih terdapat pada file CSV terpisah.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">librosa</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tsfel</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;tutup&quot;</span>
+<span class="n">folder_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;./voice/</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Ambil semua file audio di folder</span>
+<span class="n">audio_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.mp3&quot;</span><span class="p">)]</span>
+
+<span class="n">all_features</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># list untuk menampung fitur setiap file</span>
+
+<span class="c1"># konfigurasi fitur TSFEL</span>
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">get_features_by_domain</span><span class="p">(</span><span class="s2">&quot;statistical&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">audio_files</span><span class="p">:</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+
+    <span class="c1"># load audio</span>
+    <span class="n">signal</span><span class="p">,</span> <span class="n">sr</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># ekstraksi fitur</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">time_series_features_extractor</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">sr</span><span class="p">)</span>
+
+    <span class="c1"># tambahkan info nama file</span>
+    <span class="n">X</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">var</span>
+
+    <span class="c1"># simpan ke list</span>
+    <span class="n">all_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fitur diekstrak dari </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2"> — shape: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># gabungkan semua ke satu DataFrame</span>
+<span class="n">final_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">all_features</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># simpan ke satu csv</span>
+<span class="n">output_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;./hasil/</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+<span class="n">final_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">All features saved successfully to: </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final shape:&quot;</span><span class="p">,</span> <span class="n">final_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./hasil/</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Didalam CSV akan terdapat 31 fitur hasil ekstraksi dan satu fitur berupa label.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>output/terminal
+
+Final shape: (4, 32)
+   0_Absolute energy  0_Average power  0_ECDF Percentile Count_0  0_ECDF Percentile Count_1  ...  0_Skewness  0_Standard deviation  0_Variance  label
+0         781.998361       458.924837                    16358.0                    65433.0  ...    0.270414              0.097779    0.009561  tutup
+1        2950.804306      1413.234554                    20044.0                    80179.0  ...    0.016671              0.171587    0.029442  tutup
+2         690.249237       355.070285                    18662.0                    74649.0  ...    0.183912              0.086007    0.007397  tutup
+3         615.859208       427.686193                    13824.0                    55296.0  ...    0.210164              0.094393    0.008910  tutup
+
+[4 rows x 32 columns]
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 4 entries, 0 to 3
+Data columns (total 32 columns):
+ #   Column                       Non-Null Count  Dtype
+---  ------                       --------------  -----
+ 0   0_Absolute energy            4 non-null      float64
+ 1   0_Average power              4 non-null      float64
+ 2   0_ECDF Percentile Count_0    4 non-null      float64
+ 3   0_ECDF Percentile Count_1    4 non-null      float64
+ 4   0_ECDF Percentile_0          4 non-null      float64
+ 5   0_ECDF Percentile_1          4 non-null      float64
+ 6   0_ECDF_0                     4 non-null      float64
+ 7   0_ECDF_1                     4 non-null      float64
+ 8   0_ECDF_2                     4 non-null      float64
+ 9   0_ECDF_3                     4 non-null      float64
+ 10  0_ECDF_4                     4 non-null      float64
+ 11  0_ECDF_5                     4 non-null      float64
+ 12  0_ECDF_6                     4 non-null      float64
+ 13  0_ECDF_7                     4 non-null      float64
+ 14  0_ECDF_8                     4 non-null      float64
+ 15  0_ECDF_9                     4 non-null      float64
+ 16  0_Entropy                    4 non-null      float64
+ 17  0_Histogram mode             4 non-null      float64
+ 18  0_Interquartile range        4 non-null      float64
+ 19  0_Kurtosis                   4 non-null      float64
+ 20  0_Max                        4 non-null      float64
+ 21  0_Mean                       4 non-null      float64
+ 22  0_Mean absolute deviation    4 non-null      float64
+ 23  0_Median                     4 non-null      float64
+ 24  0_Median absolute deviation  4 non-null      float64
+ 25  0_Min                        4 non-null      float64
+ 26  0_Peak to peak distance      4 non-null      float64
+ 27  0_Root mean square           4 non-null      float64
+ 28  0_Skewness                   4 non-null      float64
+ 29  0_Standard deviation         4 non-null      float64
+ 30  0_Variance                   4 non-null      float64
+ 31  label                        4 non-null      object
+dtypes: float64(31), object(1)
+</pre></div>
+</div>
+<p>Lalu saya menggabungkan kedua CSV.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df_buka</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./hasil/buka.csv&quot;</span><span class="p">)</span>
+<span class="n">df_tutup</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./hasil/tutup.csv&quot;</span><span class="p">)</span>
+
+<span class="n">df_total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_buka</span><span class="p">,</span> <span class="n">df_tutup</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df_total</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;./hasil/voice.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File berhasil digabung! Bentuk data:&quot;</span><span class="p">,</span> <span class="n">df_total</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="preproccessing-data">
+<h2>Preproccessing Data<a class="headerlink" href="#preproccessing-data" title="Link to this heading">#</a></h2>
+<p>Setelah mendapatkan 1 file CSV utuh yang terdapat data suara buka dan tutup. Sekarang kita akan preproccessing data seperti mengecek missing value, mendeteksi outlier, dll.</p>
+<section id="missing-value">
+<h3>Missing Value<a class="headerlink" href="#missing-value" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+df = pd.read_csv(&quot;./hasil/voice.csv&quot;)
+print(df.info())
+
+output/terminal
+
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 9 entries, 0 to 8
+Data columns (total 32 columns):
+ #   Column                       Non-Null Count  Dtype
+---  ------                       --------------  -----
+ 0   0_Absolute energy            9 non-null      float64
+ 1   0_Average power              9 non-null      float64
+ 2   0_ECDF Percentile Count_0    9 non-null      float64
+ 3   0_ECDF Percentile Count_1    9 non-null      float64
+ 4   0_ECDF Percentile_0          9 non-null      float64
+ 5   0_ECDF Percentile_1          9 non-null      float64
+ 6   0_ECDF_0                     9 non-null      float64
+ 7   0_ECDF_1                     9 non-null      float64
+ 8   0_ECDF_2                     9 non-null      float64
+ 9   0_ECDF_3                     9 non-null      float64
+ 10  0_ECDF_4                     9 non-null      float64
+ 11  0_ECDF_5                     9 non-null      float64
+ 12  0_ECDF_6                     9 non-null      float64
+ 13  0_ECDF_7                     9 non-null      float64
+ 14  0_ECDF_8                     9 non-null      float64
+ 15  0_ECDF_9                     9 non-null      float64
+ 16  0_Entropy                    9 non-null      float64
+ 17  0_Histogram mode             9 non-null      float64
+ 18  0_Interquartile range        9 non-null      float64
+ 19  0_Kurtosis                   9 non-null      float64
+ 20  0_Max                        9 non-null      float64
+ 21  0_Mean                       9 non-null      float64
+ 22  0_Mean absolute deviation    9 non-null      float64
+ 23  0_Median                     9 non-null      float64
+ 24  0_Median absolute deviation  9 non-null      float64
+ 25  0_Min                        9 non-null      float64
+ 26  0_Peak to peak distance      9 non-null      float64
+ 27  0_Root mean square           9 non-null      float64
+ 28  0_Skewness                   9 non-null      float64
+ 29  0_Standard deviation         9 non-null      float64
+ 30  0_Variance                   9 non-null      float64
+ 31  label                        9 non-null      object
+dtypes: float64(31), object(1)
+memory usage: 2.4+ KB
+</pre></div>
+</div>
+<p>Berdasarkan hasil diatas, tidak terdapat nilai null atau Missing Value.</p>
+</section>
+</section>
+<section id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Link to this heading">#</a></h2>
+<p>Setelah kita cek Missing Value, tahap selanjutnya adalah train model. Disini kita menggunakan model K Nearest Neighbor (KNN).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">librosa</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tsfel</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span>
+    <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="p">)</span>
+
+<span class="c1"># === 1. Baca data hasil ekstraksi ===</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hasil/voice.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># === 2. Pilih kolom X dan y ===</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="s1">&#39;file_name&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+
+<span class="c1"># === 3. Encode label menjadi numerik ===</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">y_encoded</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1"># contoh: buka -&gt; 0, tutup -&gt; 1</span>
+
+<span class="c1"># === 4. Normalisasi fitur ===</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># === 5. Split data ===</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X_scaled</span><span class="p">,</span> <span class="n">y_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_encoded</span>
+<span class="p">)</span>
+
+<span class="c1"># === 6. Train model KNN ===</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># === 7. Prediksi ===</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># === 8. Evaluasi dasar ===</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Classification Report ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">precision</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 0 = buka</span>
+<span class="n">recall</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi  : </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Presisi  : </span><span class="si">{</span><span class="n">precision</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall   : </span><span class="si">{</span><span class="n">recall</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score : </span><span class="si">{</span><span class="n">f1</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># === 9. Confusion Matrix ===</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span>
+    <span class="n">xticklabels</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span>
+    <span class="n">yticklabels</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix KNN (Suara Buka/Tutup)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Predicted&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;True&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># === 9. Simpan model, scaler dan feature names ===</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./voice_recognition/model_knn.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">))</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">scaler</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./voice_recognition/scaler.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">))</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./voice_recognition/feature_names.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Model, scaler dan feature names berhasil disimpan!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Code diatas untuk melatih model KNN dan menyimpan model, scaler dan feature names dalam bentuk .pkl.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="o">/</span><span class="n">terminal</span>
+<span class="o">===</span> <span class="n">Classification</span> <span class="n">Report</span> <span class="o">===</span>
+              <span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
+
+        <span class="n">buka</span>       <span class="mf">0.78</span>      <span class="mf">0.70</span>      <span class="mf">0.74</span>        <span class="mi">20</span>
+       <span class="n">tutup</span>       <span class="mf">0.73</span>      <span class="mf">0.80</span>      <span class="mf">0.76</span>        <span class="mi">20</span>
+
+    <span class="n">accuracy</span>                           <span class="mf">0.75</span>        <span class="mi">40</span>
+   <span class="n">macro</span> <span class="n">avg</span>       <span class="mf">0.75</span>      <span class="mf">0.75</span>      <span class="mf">0.75</span>        <span class="mi">40</span>
+<span class="n">weighted</span> <span class="n">avg</span>       <span class="mf">0.75</span>      <span class="mf">0.75</span>      <span class="mf">0.75</span>        <span class="mi">40</span>
+
+<span class="n">Akurasi</span>  <span class="p">:</span> <span class="mf">0.750</span>
+<span class="n">Presisi</span>  <span class="p">:</span> <span class="mf">0.778</span>
+<span class="n">Recall</span>   <span class="p">:</span> <span class="mf">0.700</span>
+<span class="n">F1</span><span class="o">-</span><span class="n">Score</span> <span class="p">:</span> <span class="mf">0.737</span>
+<span class="p">(</span><span class="mi">160</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="Teks alternatif" src="img/Screenshot%202025-11-02%20154801.png" /></p>
+<p>Gambar diatas adalah Confusion Matrix untuk melihat prediksi dari model KNN. Sumbu X menyatakan hasil prediksi dari model KNN dan sumbu Y menyatakan label sebenarnya.</p>
+<p>Tips abal-abal untuk menyaring kualitas data. Setelah kita menyimpan model dalam bentuk .pkl, setelah itu kita langsung prediksi dengan mengambil 1 suara sampel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># kita tes data buka</span>
+<span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;buka&quot;</span>
+
+<span class="c1"># load file .pkl</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./voice_recognition/model_knn.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./voice_recognition/scaler.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./voice_recognition/feature_names.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">get_features_by_domain</span><span class="p">(</span><span class="s2">&quot;statistical&quot;</span><span class="p">)</span>
+<span class="c1"># signal, sr = librosa.load(&quot;path suara sampel&quot;, sr=None)</span>
+<span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;buka&quot;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">):</span>
+    <span class="n">signal</span><span class="p">,</span> <span class="n">sr</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./voice/</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">var</span><span class="si">}{</span><span class="n">i</span><span class="si">}</span><span class="s2">.mp3&quot;</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">time_series_features_extractor</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">sr</span><span class="p">)</span>
+
+    <span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">y_pred_new</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">pred_label</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">([</span><span class="n">y_pred_new</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🎯 Hasil prediksi: </span><span class="si">{</span><span class="n">pred_label</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">var</span><span class="si">}{</span><span class="n">i</span><span class="si">}</span><span class="s2">.mp3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>output/terminal
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka1.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka2.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka3.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka4.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka5.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka6.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka7.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka8.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka9.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka10.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka11.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka12.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka13.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka14.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka15.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka16.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka17.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka18.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: tutup - buka19.mp3
+Progress: |██████████████████████████████████████████████████| 100% Complete
+🎯 Hasil prediksi: buka - buka20.mp3
+</pre></div>
+</div>
+<p>Setelah itu kita identifikasi prediksi yang salah, lalu hapus file mp3 nya dan record ulang.</p>
+</section>
+<section id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h2>
+<p>Untuk deploy model kita gunakan Streamlit Python.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">streamlit</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sounddevice</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.io.wavfile</span><span class="w"> </span><span class="kn">import</span> <span class="n">write</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tsfel</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="c1"># === LOAD MODEL DAN SCALER ===</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;model_knn.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;scaler.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;feature_names.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🔊 Klasifikasi Suara Buka / Tutup&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;Rekam suaramu lalu biarkan model KNN menebak apakah itu **&#39;buka&#39;** atau **&#39;tutup&#39;**.&quot;</span><span class="p">)</span>
+
+<span class="c1"># === STEP 1: Rekam Suara ===</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;🎙️ Rekam Sekarang&quot;</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Merekam... silakan ucapkan kata &#39;buka&#39; atau &#39;tutup&#39;&quot;</span><span class="p">)</span>
+    <span class="n">fs</span> <span class="o">=</span> <span class="mi">44100</span>  <span class="c1"># sample rate</span>
+    <span class="n">recording</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">rec</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">duration</span> <span class="o">*</span> <span class="n">fs</span><span class="p">),</span> <span class="n">samplerate</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">sd</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&quot;✅ Rekaman selesai!&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Simpan ke file sementara</span>
+    <span class="n">temp_wav</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s2">&quot;.mp3&quot;</span><span class="p">)</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">temp_wav</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">recording</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="n">temp_wav</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;audio/mp3&quot;</span><span class="p">)</span>
+
+    <span class="c1"># === STEP 2: Ekstraksi Fitur TSFEL ===</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;⏳ Mengekstraksi fitur suara...&quot;</span><span class="p">)</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">time_series_features_extractor</span><span class="p">(</span>
+        <span class="n">tsfel</span><span class="o">.</span><span class="n">get_features_by_domain</span><span class="p">(),</span>
+        <span class="n">recording</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="n">fs</span><span class="o">=</span><span class="n">fs</span>
+    <span class="p">)</span>
+
+    <span class="n">features</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># === STEP 3: Normalisasi &amp; Prediksi ===</span>
+    <span class="n">label_map</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;buka&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;tutup&quot;</span><span class="p">}</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+
+    <span class="c1"># --- 🔮 Prediksi dan Probabilitas ---</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">probs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># &lt;-- Tambahan</span>
+
+    <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.05</span>  <span class="c1"># semakin besar, semakin lembut</span>
+    <span class="n">probs</span> <span class="o">=</span> <span class="p">(</span><span class="n">probs</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">probs</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="n">label</span> <span class="o">=</span> <span class="n">label_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="s2">&quot;Tidak diketahui, silahkan rekam ulang&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🎯 Hasil prediksi: **</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
+
+    <span class="c1"># --- 📊 Tampilkan probabilitas ---</span>
+    <span class="n">prob_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;Label&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;buka&quot;</span><span class="p">,</span> <span class="s2">&quot;tutup&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;Probabilitas&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">probs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="p">})</span>
+    <span class="c1"># st.bar_chart(prob_df.set_index(&quot;Label&quot;))</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### Nilai probabilitas:&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🟢 **Buka:** </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔵 **Tutup:** </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Code diatas untuk menginstall Streamlit dan membuat aplikasi sederhana dari Streamlit beserta interface-nya. Dalam code diatas terdapat load model, scaler dan feature names dengan file berupa .pkl hasil dari menimpan model pada code sebelumnya. Berikut adalah tampilan interface sederhana:</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%202025-11-02%20155231.png" /></p>
+<p>Lalu setelah itu, kita upload model kita ke cloud Streamlit</p>
+<p>a. Pertama login ke Streamlit <a class="reference external" href="https://streamlit.io/">https://streamlit.io/</a> . Klik free di pojok kanan atas lalu pilih connect with GitHub.</p>
+<p><img alt="Teks alternatif" src="img/Screenshot%202025-11-02%20160818.png" /></p>
+<p>b. Push project ke GitHub dengan struktur folder sebagai berikut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>voice_app/
+│
+├── model_knn.pkl           ← model yang sudah dilatih &amp; disimpan
+├── scaler.pkl              ← scaler (StandardScaler) jika kamu pakai normalisasi
+├── feature_names.pkl       ← untuk menyimpan nama fitur dari model
+├── app.py                  ← file utama streamlit
+└── requirements.txt        ← (opsional) untuk deploy ke cloud
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Setelah itu isi data sesuai dari repositori GitHub kalian.</p></li>
+<li><p>Selesai, sekarang modelmu sudah di upload ke Cloud Streamlit seperti: <a class="reference external" href="https://voice-recognition-726v9k54uzp5j5dpezesfs.streamlit.app/">https://voice-recognition-726v9k54uzp5j5dpezesfs.streamlit.app/</a> .</p></li>
+<li><p>Code Streamlit saya:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">audio_recorder_streamlit</span><span class="w"> </span><span class="kn">import</span> <span class="n">audio_recorder</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">soundfile</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pydub</span><span class="w"> </span><span class="kn">import</span> <span class="n">AudioSegment</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">joblib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">librosa</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tsfel</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🎙️ Voice Classifier: Buka / Tutup&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;Rekam suaramu lalu biarkan model KNN menebak apakah itu **&#39;buka&#39;** atau **&#39;tutup&#39;**.&quot;</span><span class="p">)</span>
+
+<span class="n">model_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;model_knn.pkl&quot;</span><span class="p">)</span>
+<span class="n">scaler_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;scaler.pkl&quot;</span><span class="p">)</span>
+<span class="n">feature_names_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;feature_names.pkl&quot;</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">scaler_path</span><span class="p">)</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">feature_names_path</span><span class="p">)</span>
+
+<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">y_encoded</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">([</span><span class="s2">&quot;buka&quot;</span><span class="p">,</span> <span class="s2">&quot;tutup&quot;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="s2">&quot;last_audio&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">last_audio</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;🎙️ Rekam langsung&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_audio</span><span class="p">(</span><span class="n">audio_bytes</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">&quot;rekaman&quot;</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">audio_segment</span> <span class="o">=</span> <span class="n">AudioSegment</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">audio_bytes</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;wav&quot;</span><span class="p">)</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">audio_segment</span><span class="o">.</span><span class="n">get_array_of_samples</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">audio_segment</span><span class="o">.</span><span class="n">sample_width</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span> <span class="o">/</span> <span class="mf">32768.0</span>
+        <span class="k">elif</span> <span class="n">audio_segment</span><span class="o">.</span><span class="n">sample_width</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span> <span class="o">/</span> <span class="mf">2147483648.0</span>
+
+        <span class="k">if</span> <span class="n">audio_segment</span><span class="o">.</span><span class="n">channels</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">sr</span> <span class="o">=</span> <span class="n">audio_segment</span><span class="o">.</span><span class="n">frame_rate</span>
+
+        <span class="c1"># Resample ke 16kHz jika perlu</span>
+        <span class="k">if</span> <span class="n">sr</span> <span class="o">!=</span> <span class="mi">16000</span><span class="p">:</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">orig_sr</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">target_sr</span><span class="o">=</span><span class="mi">16000</span><span class="p">)</span>
+            <span class="n">sr</span> <span class="o">=</span> <span class="mi">16000</span>
+        
+        <span class="c1"># Normalisasi</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">samples</span><span class="p">))</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="p">)</span>
+
+        <span class="c1"># Simpan untuk preview</span>
+        <span class="n">sf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;temp_audio.wav&quot;</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">sr</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="s2">&quot;temp_audio.wav&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;audio/wav&quot;</span><span class="p">)</span>
+
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;⏳ Mengekstraksi fitur...&quot;</span><span class="p">)</span>
+        <span class="n">cfg</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">get_features_by_domain</span><span class="p">(</span><span class="s2">&quot;statistical&quot;</span><span class="p">)</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">tsfel</span><span class="o">.</span><span class="n">time_series_features_extractor</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Pastikan kolom sama dengan feature_names</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># === Prediksi ===</span>
+        <span class="n">label_map</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;buka&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;tutup&quot;</span><span class="p">}</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># &lt;-- Tambahan</span>
+
+        <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.05</span>  <span class="c1"># semakin besar, semakin lembut</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="p">(</span><span class="n">probs</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">probs</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">label_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="s2">&quot;Tidak diketahui, silahkan rekam ulang&quot;</span><span class="p">)</span>
+
+        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🎯 Hasil prediksi: **</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
+
+        <span class="c1"># --- 📊 Tampilkan probabilitas ---</span>
+        <span class="n">prob_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s2">&quot;Label&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;buka&quot;</span><span class="p">,</span> <span class="s2">&quot;tutup&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;Probabilitas&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">probs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="p">})</span>
+        <span class="c1"># st.bar_chart(prob_df.set_index(&quot;Label&quot;))</span>
+
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Nilai probabilitas:&quot;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🟢 **Buka:** </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔵 **Tutup:** </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error saat analisis: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;🎙️ Rekam langsung&quot;</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;🎙️ Tekan tombol mikrofon di bawah, ucapkan **&#39;BUKA&#39;** atau **&#39;TUTUP&#39;** dengan jelas, lalu tekan stop.&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Audio recorder widget</span>
+    <span class="n">audio_bytes</span> <span class="o">=</span> <span class="n">audio_recorder</span><span class="p">(</span>
+        <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Klik untuk merekam&quot;</span><span class="p">,</span>
+        <span class="n">recording_color</span><span class="o">=</span><span class="s2">&quot;#e74c3c&quot;</span><span class="p">,</span>
+        <span class="n">neutral_color</span><span class="o">=</span><span class="s2">&quot;#3498db&quot;</span><span class="p">,</span>
+        <span class="n">icon_name</span><span class="o">=</span><span class="s2">&quot;microphone&quot;</span><span class="p">,</span>
+        <span class="n">icon_size</span><span class="o">=</span><span class="s2">&quot;2x&quot;</span><span class="p">,</span>
+        <span class="n">pause_threshold</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+        <span class="n">sample_rate</span><span class="o">=</span><span class="mi">16000</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Jika ada audio baru yang direkam</span>
+    <span class="k">if</span> <span class="n">audio_bytes</span><span class="p">:</span>
+        <span class="c1"># Cek apakah ini audio baru (berbeda dari sebelumnya)</span>
+        <span class="k">if</span> <span class="n">audio_bytes</span> <span class="o">!=</span> <span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">last_audio</span><span class="p">:</span>
+            <span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">last_audio</span> <span class="o">=</span> <span class="n">audio_bytes</span>
+            
+            <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&quot;✅ Audio berhasil direkam! Menganalisis...&quot;</span><span class="p">)</span>
+            
+            <span class="c1"># Analisis otomatis</span>
+            <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">spinner</span><span class="p">(</span><span class="s2">&quot;🔄 Memproses audio...&quot;</span><span class="p">):</span>
+                <span class="n">analyze_audio</span><span class="p">(</span><span class="n">audio_bytes</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">&quot;rekaman&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Audio sama dengan sebelumnya, tampilkan tombol analisis ulang</span>
+            <span class="n">st</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;ℹ️ Audio sudah dianalisis. Rekam ulang untuk prediksi baru.&quot;</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;🔄 Analisis Ulang&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;secondary&quot;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">spinner</span><span class="p">(</span><span class="s2">&quot;🔄 Memproses audio...&quot;</span><span class="p">):</span>
+                    <span class="n">analyze_audio</span><span class="p">(</span><span class="n">audio_bytes</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">&quot;rekaman&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;👆 Klik tombol mikrofon di atas untuk mulai merekam&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Isi requirements.txt</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">streamlit</span>
+<span class="n">audio</span><span class="o">-</span><span class="n">recorder</span><span class="o">-</span><span class="n">streamlit</span>
+<span class="n">numpy</span>
+<span class="n">pandas</span>
+<span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+<span class="n">joblib</span>
+<span class="n">librosa</span>
+<span class="n">soundfile</span>
+<span class="n">pydub</span>
+<span class="n">tsfel</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengambilan-data">Pengambilan Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengubahan-nama-file-serentak">a. Pengubahan Nama File Serentak</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-ekstraksi-audio-menjadi-csv">b. Ekstraksi Audio menjadi CSV</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preproccessing-data">Preproccessing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-value">Missing Value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">Deployment</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
