@@ -17,4 +17,5 @@ chapters:
     - file: outlierdetectionclustering
 - file: no2
 - file: no2_2
+- file: voice_recognition
 - file: knimetutorial
